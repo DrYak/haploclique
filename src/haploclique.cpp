@@ -28,7 +28,7 @@
 #include <algorithm>
 #include <deque>
 
-#include "docopt/docopt.h"
+#include <docopt.h>
 
 #include <boost/tokenizer.hpp>
 #include <boost/lexical_cast.hpp>

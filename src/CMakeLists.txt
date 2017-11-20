@@ -27,14 +27,15 @@ target_include_directories(hc PUBLIC
 	${HC_SRCDIR}
 	${Boost_INCLUDE_DIR}
 	${HC_EXTERNALDIR}/BamTools/src
+	${HC_EXTERNALDIR}/docopt.cpp
 )
 target_link_libraries(hc
 	${Boost_LIBRARIES}
 )
 if (HC_STATIC)
-	target_link_libraries(hc BamTools-static)
+	target_link_libraries(hc BamTools-static docopt_s)
 else()
-	target_link_libraries(hc BamTools)
+	target_link_libraries(hc BamTools docopt_s)
 endif()
 
 set_target_properties(hc PROPERTIES COMPILE_FLAGS ${HC_COMPILE_FLAGS})
